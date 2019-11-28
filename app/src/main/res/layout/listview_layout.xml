@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/textEmotionPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/candal"
+            android:gravity="center_horizontal"
+            android:text="EMOTION PRINCIPAL"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textEmotionPrincipal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgThumb"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp">
+
+
+                    <TextView
+                        android:id="@+id/caracteristicas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:text="Features"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/caracteristicas"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Estimated Age: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#"
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_age"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/linear_age"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Gender: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#: "
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_hair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_gender"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textGender"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Hair: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textHair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#: "
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_facial_hair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_hair"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Facial Hair: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textFacialHair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="# "
+                            android:textColor="#B9000000" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/accesories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_facial_hair"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:text="Accesories"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_accesories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/accesories"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Accesories: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textAccesories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#"
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_glasses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_accesories"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Glasses: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textGlasses"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textMakeup"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="# "
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_makeup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_glasses"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Makeup: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textMakeup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#: "
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/others_emotions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_makeup"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:text="Others Emotions"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emotion1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/others_emotions"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:textColor="#B9000000" />
+
+                    <TextView
+                        android:id="@+id/emotion2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/emotion1"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:textColor="#B9000000" />
+
+
+                    <TextView
+                        android:id="@+id/extras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/emotion2"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/comfortaa_light"
+                        android:text="Additional Features"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_eyes_occluded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/extras"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Eyes Occluded: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textEyesOccluded"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#"
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_mouth_occluded"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_eyes_occluded"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="Mouth Occluded: "
+                            android:textColor="#B9000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textMouthOccluded"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:text="#"
+                            android:textColor="#B9000000" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
