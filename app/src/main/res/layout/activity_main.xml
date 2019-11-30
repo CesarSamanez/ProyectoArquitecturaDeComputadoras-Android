@@ -5,19 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:fontFamily="@font/candal"
         android:text="Face and Emotion Recognition"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        />
+        android:textColor="#FFFFFF"
+        android:background="#515A5A"
+        android:textSize="30dp"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -39,10 +38,10 @@
         android:id="@+id/takePic"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="40dp"
         android:fontFamily="@font/comfortaa_light"
+        android:layout_above="@id/processClick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         android:textColor="#000000"
         android:textStyle="bold"
         android:text="Take Picture" />
@@ -51,11 +50,10 @@
         android:id="@+id/processClick"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginRight="50dp"
         android:fontFamily="@font/comfortaa_light"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
         android:textColor="#000000"
         android:textStyle="bold"
         android:text="Process" />

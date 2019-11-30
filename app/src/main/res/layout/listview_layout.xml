@@ -39,7 +39,8 @@
                     android:id="@+id/imgThumb"
                     android:layout_width="250dp"
                     android:layout_height="250dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:background="@drawable/borde"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
