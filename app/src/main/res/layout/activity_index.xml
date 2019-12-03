@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BEBBBB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/titleIndex"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/candal"
+            android:layout_marginTop="5dp"
+            android:text="DataFace"
+            android:textColor="#000000"
+            android:textSize="30dp" />
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_marginTop="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/info"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleIndex"
+        android:layout_marginTop="3dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/messageIndex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Take a picture and discover your personal info"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/hidden"
+            android:layout_width="250sp"
+            android:layout_height="250sp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatarindex1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/takePic"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:background="#25AE88"
+                android:text="Take Picture"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <Button
+                android:id="@+id/processClick"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="#556080"
+                android:text="Process"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
