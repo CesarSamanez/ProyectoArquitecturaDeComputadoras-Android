@@ -2,6 +2,7 @@ package com.example.faceandemotionrecognition;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import com.microsoft.projectoxford.face.contract.Makeup;
 
 import java.io.ByteArrayOutputStream;
 import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
@@ -83,8 +85,16 @@ public class CustomAdapter extends BaseAdapter {
 
 
         imageView = view.findViewById(R.id.imgThumb);
+        String edad = "" + faces[position].faceAttributes.age;
+        if (edad.length() == 4) {
+            edad = edad.substring(0,2);
+        }
+        if (edad.length() == 3) {
+            edad=edad.substring(0,1);
 
-        age.setText("" + faces[position].faceAttributes.age);
+        }
+
+        age.setText(edad);
         gender.setText("" + faces[position].faceAttributes.gender);
         hair.setText("" + getHair(faces[position].faceAttributes.hair));
         facialHair.setText("" + getFacialHair(faces[position].faceAttributes.facialHair));
@@ -115,18 +125,21 @@ public class CustomAdapter extends BaseAdapter {
             counter++;
             arrayList.add(value);
         }
-        emotionPrincipal.setText(rank.get(rank.size() - 1) + "  " + 100 * arrayList.get(rank.size() - 1) + "%");
+
+        DecimalFormat df = new DecimalFormat("0.00");
+
+        emotionPrincipal.setText(rank.get(rank.size() - 1) + "  " + df.format(100 * arrayList.get(rank.size() - 1)) + "%");
         if (rank.get(rank.size() - 2) != null) {
-            emotion1.setText(rank.get(rank.size() - 2) + ": " + 100 * arrayList.get(rank.size() - 2) + "%");
+            emotion1.setText(rank.get(rank.size() - 2) + ": " + df.format(100 * arrayList.get(rank.size() - 2)) + "%");
         }
         if (rank.get(rank.size() - 3) != null) {
-            emotion2.setText(rank.get(rank.size() - 3) + ": " + 100 * arrayList.get(rank.size() - 3) + "%");
+            emotion2.setText(rank.get(rank.size() - 3) + ": " + df.format(100 * arrayList.get(rank.size() - 3)) + "%");
         }
         FaceRectangle faceRectangle = faces[position].faceRectangle;
         Bitmap bitmap = Bitmap.createBitmap(orig, faceRectangle.left, faceRectangle.top, faceRectangle.width, faceRectangle.height);
 
         imageView.setImageBitmap(bitmap);
-        imageView.setImageBitmap(bitmap);
+
         return view;
     }
 

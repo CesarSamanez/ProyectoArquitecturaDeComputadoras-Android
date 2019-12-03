@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/Copy"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:background="#ffffff"
         android:orientation="horizontal">
 
@@ -19,7 +19,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/back">
 
         </Button>
@@ -28,17 +28,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="13dp"
             android:text="About Us"
+            android:fontFamily="@font/nunito_bold"
             android:textColor="#000000"
-            android:textSize="25dp" />
+            android:textSize="22dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/Copy"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:background="#ffffff"
         android:orientation="vertical">
 

@@ -1,9 +1,12 @@
 package com.example.faceandemotionrecognition;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -23,6 +26,14 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         String data = getIntent().getStringExtra("list_faces");
+        Button back = (Button) findViewById(R.id.btnBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ResultActivity.this, Index.class);
+                startActivity(intent);
+            }
+        });
 
         Gson gson = new Gson();
         Face[] faces = gson.fromJson(data, Face[].class);

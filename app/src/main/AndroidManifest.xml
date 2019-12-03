@@ -12,9 +12,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/iconfinder"
-        android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher_background"
+        android:icon="@mipmap/ic_launcher_apk_round"
+        android:label="DataFace"
+        android:roundIcon="@mipmap/ic_launcher_apk_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Copyright"></activity>
