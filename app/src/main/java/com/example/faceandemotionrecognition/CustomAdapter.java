@@ -1,6 +1,7 @@
 package com.example.faceandemotionrecognition;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
@@ -10,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.example.faceandemotionrecognition.R;
 import com.microsoft.projectoxford.face.FaceServiceClient;
@@ -140,6 +144,8 @@ public class CustomAdapter extends BaseAdapter {
 
         imageView.setImageBitmap(bitmap);
 
+
+
         return view;
     }
 
@@ -149,48 +155,6 @@ public class CustomAdapter extends BaseAdapter {
 
     private String getMakeup(Makeup makeup) {
         return (makeup.eyeMakeup || makeup.lipMakeup) ? "Yes" : "No";
-    }
-
-    private String getEmotion(Emotion emotion) {
-        String emotionType = "";
-        double emotionValue = 0.0;
-        if (emotion.anger > emotionValue) {
-            emotionValue = emotion.anger;
-            emotionType = "Anger";
-        }
-        if (emotion.contempt > emotionValue) {
-            emotionValue = emotion.contempt;
-            emotionType = "Contempt";
-        }
-        if (emotion.disgust > emotionValue) {
-            emotionValue = emotion.disgust;
-            emotionType = "Disgust";
-        }
-        if (emotion.fear > emotionValue) {
-            emotionValue = emotion.fear;
-            emotionType = "Fear";
-        }
-        if (emotion.happiness > emotionValue) {
-            emotionValue = emotion.happiness;
-            emotionType = "Happiness";
-        }
-        if (emotion.neutral > emotionValue) {
-            emotionValue = emotion.neutral;
-            emotionType = "Neutral";
-        }
-        if (emotion.sadness > emotionValue) {
-            emotionValue = emotion.sadness;
-            emotionType = "Sadness";
-        }
-        if (emotion.surprise > emotionValue) {
-            emotionValue = emotion.surprise;
-            emotionType = "Surprise";
-        }
-        return String.format("%s: %f", emotionType, 100 * emotionValue);
-    }
-
-    private String getHeadPose(HeadPose headPose) {
-        return String.format("Pitch: %s, Roll: %s, Yaw: %s", headPose.pitch, headPose.roll, headPose.yaw);
     }
 
     private String getAccessories(Accessory[] accessories) {

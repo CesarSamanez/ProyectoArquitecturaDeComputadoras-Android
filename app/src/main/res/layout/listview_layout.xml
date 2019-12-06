@@ -21,17 +21,18 @@
             android:gravity="center_horizontal"
             android:text="EMOTION PRINCIPAL"
             android:textColor="#FFFFFF"
-            android:textSize="23dp"
+            android:textSize="25dp"
             android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/imgThumb"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="240dp"
-            android:layout_marginTop="40dp"
-            android:scaleType="fitXY" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"/>
     </RelativeLayout>
 
     <RelativeLayout
