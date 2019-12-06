@@ -6,5 +6,5 @@ Universidad Nacional de San Agustin
 Escuela Profesional de Ingenieria de Sistemas
 
 Desarrolladores:
-  Cesar Salvador Samanez Jimenez
+  Cesar Salvador Samanez Jimenez,
   Jhonatan Jesus Acuña Huisacayna
