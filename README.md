@@ -3,6 +3,5 @@
 Android - Microsoft Azure- Cognitive Service - Face Api - Java
 
 
-Desarrolladores:
-  Cesar Salvador Samanez Jimenez,
-  Jhonatan Jesus Acuña Huisacayna
+Desarrollador:
+  Cesar Salvador Samanez Jimenez
